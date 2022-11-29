@@ -3,17 +3,18 @@ import '../styles/App.css';
 const App = () => {
 
   const handleDoubleClick = (event) =>{
-    if(event.target.value)
+    if(event.detail===2)
     {
-      console.lof("I was double clicked");
+      console.log("I was double clicked");
     }
-   else {
+   else 
+   {
       console.log("I was not double clicked");
     }
   }
   return (
     <div id="main">
-      <button onDoubleClick={handleDoubleClick} id="dblclick-btn">Double click me</button>
+      <button onDoubleClick={handleDoubleClick} onClick={handleDoubleClick} id="dblclick-btn">Double click me</button>
     </div>
   )
 }
